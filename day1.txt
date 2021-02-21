@@ -1,0 +1,70 @@
+Authentication - validate user
+Authorization  - permission for access (Resources)
+
+
+Access Token - life time
+
+
+Client -- <Content type>  --> Servers 
+Client <-- <Accept>  -- Servers 
+
+
+End point
+===========
+
+	https://dev102438.service-now.com/api/now/table/incident
+
+1) server - dev102438.service-now (IP address)
+2) port	- 8080 / 80
+3) resources - api/now/table/incident
+
+Method - Get
+
+Parameters
+		Query parameters -> sysparm_fields = number, sys_id
+
+	Ex: https://dev102438.service-now.com/api/now/table/incident?sysparm_fields = number, sys_id
+		
+
+Path parameters  -> 
+
+	Ex: https://dev102438.service-now.com/api/now/table/incident/46c03489a9fe19810148cd5b8cbf501e
+
+
+https://dev102438.service-now.com/api/now/table/incident/46c03489a9fe19810148cd5b8cbf501e?sysparm_fields=number, sys_id&sysparm_limit=10
+
+
+Header
+
+	Authorization - Basic Auth , Oauth and Token
+			(admin / Tuna@123)
+	request type  - Content Type - application/json (only in postman)
+
+
+
+
+	
+
+Response (Output)
+
+
+1 Create WorkSpace
+	2 Create a Collection (For every module) -> incident
+		3 create a request (Get)
+
+	
+Class Room Session
+==================
+
+1) Get All Change Request by displaing sys_id, type fields in response2) And Get 10 Change Request with response as XML
+
+
+
+
+
+
+
+
+
+
+
