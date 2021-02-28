@@ -1,0 +1,37 @@
+1) Post	
+	EndPoint, Auth info ,Parameter and (Body / form param)
+	status code - 201
+	Content-Type - (body data) json / xml (in postman it's optional)
+Example
+	i) Create Incident without body (create record with default value)
+	ii) Create Incident with body as json data
+
+	EX:
+		{
+			"Key1" : "Value1",
+			"Key2" : "Value2"
+		}
+
+	iii) Create Incident with body as json file
+
+variable 
+	 i) Global
+	 ii) Environment	iii) Collection 
+
+
+
+2) Patch / Put
+	EndPoint, Auth info ,Parameter 
+	status code - 200
+	Content-Type - (body data) json / xml (in postman it's optional)
+	Param - Path Param (sys_id)
+
+3) Delete 
+	EndPoint, Auth info ,Parameter and (Path param)
+	status code - 204 - > No Content
+	Param - Path Param (sys_id)
+
+4) Channing 
+
+		Create Record -> Update Record -> Delete Record 
+5) Assertions 
