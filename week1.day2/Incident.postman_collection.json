@@ -9,6 +9,10 @@
 			"name": "Channing",
 			"item": [
 				{
+					"name": "Channing",
+					"item": []
+				},
+				{
 					"name": "Create incident",
 					"event": [
 						{
@@ -47,21 +51,6 @@
 						}
 					],
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "Tuna@123",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -87,18 +76,16 @@
 							}
 						},
 						"url": {
-							"raw": "https://dev102438.service-now.com/api/now/table/incident",
+							"raw": "https://{{server}}/api/now/table/{{tableName}}",
 							"protocol": "https",
 							"host": [
-								"dev102438",
-								"service-now",
-								"com"
+								"{{server}}"
 							],
 							"path": [
 								"api",
 								"now",
 								"table",
-								"incident"
+								"{{tableName}}"
 							],
 							"query": [
 								{
@@ -119,21 +106,6 @@
 				{
 					"name": "Update incident",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "Tuna@123",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PATCH",
 						"header": [
 							{
@@ -159,18 +131,16 @@
 							}
 						},
 						"url": {
-							"raw": "https://dev102438.service-now.com/api/now/table/incident/{{sys_id}}",
+							"raw": "https://{{server}}/api/now/table/{{tableName}}/{{sys_id}}",
 							"protocol": "https",
 							"host": [
-								"dev102438",
-								"service-now",
-								"com"
+								"{{server}}"
 							],
 							"path": [
 								"api",
 								"now",
 								"table",
-								"incident",
+								"{{tableName}}",
 								"{{sys_id}}"
 							],
 							"query": [
@@ -192,21 +162,6 @@
 				{
 					"name": "Delete incident",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "Tuna@123",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								}
-							]
-						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -223,18 +178,16 @@
 							}
 						],
 						"url": {
-							"raw": "https://dev102438.service-now.com/api/now/table/incident/{{sys_id}}",
+							"raw": "https://{{server}}/api/now/table/{{tableName}}/{{sys_id}}",
 							"protocol": "https",
 							"host": [
-								"dev102438",
-								"service-now",
-								"com"
+								"{{server}}"
 							],
 							"path": [
 								"api",
 								"now",
 								"table",
-								"incident",
+								"{{tableName}}",
 								"{{sys_id}}"
 							],
 							"query": [
@@ -747,6 +700,47 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Tuna@123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "tableName",
+			"value": ""
 		}
 	]
 }

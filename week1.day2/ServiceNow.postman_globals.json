@@ -1,0 +1,24 @@
+{
+	"id": "c7000ee0-5040-4278-8d98-66889ae849c7",
+	"values": [
+		{
+			"key": "short_d",
+			"value": "Install postman in my system 1",
+			"enabled": true
+		},
+		{
+			"key": "category",
+			"value": "Software",
+			"enabled": true
+		},
+		{
+			"key": "sys_id",
+			"value": "355dc8a22fe26010e6575e972799b67c",
+			"enabled": true
+		}
+	],
+	"name": "ServiceNow Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-02-28T05:37:01.278Z",
+	"_postman_exported_using": "Postman/8.0.6"
+}
