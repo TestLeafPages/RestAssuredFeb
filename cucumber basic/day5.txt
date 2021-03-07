@@ -1,0 +1,100 @@
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>4.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>6.10.0</version>
+		</dependency>
+		<dependency>
+    			<groupId>io.cucumber</groupId>
+  			<artifactId>cucumber-testng</artifactId>
+    			<version>6.10.0</version>
+		</dependency>
+
+
+
+ServiceNow
+	
+	Client -> Server(Without Auth)
+	Client <- Server(ask Auth)
+	Client -> Server(privide Auth)
+	Client <- Server(resource)
+
+jira (preemptive() - > RestAssured)
+
+	Client -> Server(With Auth)
+	Client <- Server(resource)
+
+@BeforeClass
+	@BeforeMethod
+		@Test
+	@AfterMethod
+@AfterClass
+
+
+Request (Client -> Server) (remote )
+	Request method, endpoint, auth and etc.
+	contentType -> create format 
+	body
+	Headers
+	accept	 (xml)   -> tell the server to respond in requested format (XML, Json, HTML and etc)
+
+response (Local)
+	contentType -> xml
+	statuscode
+	body
+	Headers
+
+Cucumber + RestAssured
+
+	Cucumber is a test tool for BDD (Behavior Driven Development) based Approche
+	
+
+	Tech Team (Developer, Test and etc) & Non Tech Team (Client , BA and etc)
+
+		Discovery ----> Formulation (Feature file(Living Documents))-----> Automation
+
+	Gherkin - it is english text language. which helps the cucumber tool to interpret and execute the Automation test scripts
+
+
+	KeyWord -> Feature , Scenario, Scenario Outline, Hook, Steps(Given, When, Then , And & But)
+
+	
+1. Create Feature file under feature package
+2. Create Scenario under created feature for Create a new Incident with Steps
+3. Create step definition (Create a java method for every steps in feature file) under step package for the scenario
+4. Mapping the steps(feature steps) with step definition (Java implementation)
+5. Create a Runner class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
